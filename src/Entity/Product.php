@@ -47,6 +47,12 @@ class Product
     private $category;
 
     /**
+     * @ORM\ManyToOne(targetEntity=SubCategory::class, inversedBy="products")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $subCategory;
+
+    /**
      * @ORM\ManyToOne(targetEntity=Brand::class, inversedBy="products")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -129,6 +135,18 @@ class Product
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getSubCategory(): ?SubCategory
+    {
+        return $this->subCategory;
+    }
+
+    public function setSubCategory(?SubCategory $subCategory): self
+    {
+        $this->subCategory = $subCategory;
 
         return $this;
     }
