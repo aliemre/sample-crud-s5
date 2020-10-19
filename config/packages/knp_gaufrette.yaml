@@ -1,0 +1,9 @@
+knp_gaufrette:
+    adapters:
+        local_adapter:
+            local:
+                directory:  '%kernel.project_dir%/public/%upload_dir%'
+                create:     true
+    filesystems:
+        product_images_fs:
+            adapter: local_adapter

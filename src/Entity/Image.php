@@ -4,9 +4,12 @@ namespace App\Entity;
 
 use App\Repository\ImageRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ImageRepository::class)
+ * @Vich\Uploadable
  */
 class Image
 {
@@ -31,6 +34,11 @@ class Image
      * @ORM\Column(type="string", length=200)
      */
     private $filePath;
+
+    /**
+     * @Vich\UploadableField(mapping="products", fileNameProperty="filePath", originalName="name")
+     */
+    private $tmpFile;
 
     /**
      * @ORM\Column(type="boolean")
@@ -80,6 +88,13 @@ class Image
     public function setFilePath(string $filePath): self
     {
         $this->filePath = $filePath;
+
+        return $this;
+    }
+
+    public function setTmpFile(File $file = null): self
+    {
+        $this->tmpFile = $file;
 
         return $this;
     }
