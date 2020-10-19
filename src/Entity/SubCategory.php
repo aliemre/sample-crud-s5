@@ -6,6 +6,7 @@ use App\Repository\SubCategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ORM\Table(name="sub_categories")
  * @ORM\Entity(repositoryClass=SubCategoryRepository::class)
  */
 class SubCategory

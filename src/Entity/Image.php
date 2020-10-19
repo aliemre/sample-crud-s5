@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
+ * @ORM\Table(name="images")
  * @ORM\Entity(repositoryClass=ImageRepository::class)
  * @Vich\Uploadable
  */

@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ORM\Table(name="brands")
  * @ORM\Entity(repositoryClass=BrandRepository::class)
  */
 class Brand
