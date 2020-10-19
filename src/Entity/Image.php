@@ -33,6 +33,11 @@ class Image
     private $filePath;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isCover;
+
+    /**
      * @ORM\ManyToOne(targetEntity=Product::class, inversedBy="images")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -75,6 +80,18 @@ class Image
     public function setFilePath(string $filePath): self
     {
         $this->filePath = $filePath;
+
+        return $this;
+    }
+
+    public function getIsCover(): ?bool
+    {
+        return $this->isCover;
+    }
+
+    public function setIsCover(bool $isCover): self
+    {
+        $this->isCover = $isCover;
 
         return $this;
     }
