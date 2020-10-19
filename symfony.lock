@@ -44,6 +44,19 @@
             "src/Repository/.gitignore"
         ]
     },
+    "doctrine/doctrine-migrations-bundle": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "baaa439e3e3179e69e3da84b671f0a3e4a2f56ad"
+        },
+        "files": [
+            "config/packages/doctrine_migrations.yaml",
+            "migrations/.gitignore"
+        ]
+    },
     "doctrine/event-manager": {
         "version": "1.1.1"
     },
@@ -55,6 +68,9 @@
     },
     "doctrine/lexer": {
         "version": "1.2.1"
+    },
+    "doctrine/migrations": {
+        "version": "3.0.1"
     },
     "doctrine/orm": {
         "version": "2.7.4"
@@ -85,6 +101,9 @@
     },
     "nikic/php-parser": {
         "version": "v4.10.2"
+    },
+    "ocramius/proxy-manager": {
+        "version": "2.2.3"
     },
     "php": {
         "version": "7.3"
@@ -357,5 +376,11 @@
         "files": [
             "config/packages/vich_uploader.yaml"
         ]
+    },
+    "zendframework/zend-code": {
+        "version": "3.4.1"
+    },
+    "zendframework/zend-eventmanager": {
+        "version": "3.2.1"
     }
 }
