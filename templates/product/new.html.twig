@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Product{% endblock %}
+
+{% block body %}
+    <h1>Create Product</h1>
+    <hr>
+
+    {{ include('product/_form.html.twig') }}
+
+    <hr>
+    <a class="btn btn-info" href="{{ path('product_index') }}">back to list</a>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/lib/bootstrap-tagsinput/tagsinput.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="{{ asset('assets/lib/bootstrap-tagsinput/typeahead.bundle.js') }}"></script>
+    <script src="{{ asset('assets/lib/bootstrap-tagsinput/tagsinput.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+{% endblock %}
+

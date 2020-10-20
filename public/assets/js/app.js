@@ -12,9 +12,4 @@ $(document).ready(function() {
             }
         }
     });
-    $('.tags-input').on('itemAdded', function(event) {
-        setTimeout(function(){
-            $(">input[type=text]",".bootstrap-tagsinput").val("");
-        }, 1);
-    });
 });

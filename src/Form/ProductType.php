@@ -48,11 +48,17 @@ class ProductType extends AbstractType
                 'label' => 'Quantity Available'
             ])
             ->add('description', TextareaType::class, [
-                'label' => 'Description'
+                'label' => 'Description',
+                'attr' => ['class' => 'summernote']
             ])
             ->add('tags', TextType::class, [
                 'label' => 'Tags',
-                'attr' => ['class' => 'tags-input']
+                'attr' => [
+                    'class' => 'tags-input',
+                    'autocomplete' => 'off',
+                    'value' => implode(',', $options['tags'])
+                ],
+                'mapped' => false,
             ])
         ;
     }
@@ -61,6 +67,7 @@ class ProductType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Product::class,
+            'tags' => []
         ]);
     }
 }
