@@ -9,6 +9,7 @@ runtime:
         - sodium
         - iconv
         - ctype
+        - pdo_mysql
         
 
 #variables:
@@ -45,3 +46,6 @@ hooks:
         set -x -e
 
         (>&2 symfony-deploy)
+
+relationships:
+    database: "mydatabase:mysql"
